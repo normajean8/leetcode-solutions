@@ -19,9 +19,5 @@ class Solution:
 
                 frequency[cj]=1
 
-        if seen==frequency:
-            return True
-
-        else:
-            return False
-        
+        return seen==frequency
+            
