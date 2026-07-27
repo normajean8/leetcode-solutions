@@ -1,13 +1,6 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        seen={}
         freq={}
-
-        for ch in ransomNote:
-            if ch in seen:
-                seen[ch]+=1
-            else:
-                seen[ch]=1
 
         for cj in magazine:
             if cj in freq:
@@ -16,12 +9,13 @@ class Solution:
             else:
                 freq[cj]=1
 
-        for ch in seen:
+        for ch in ransomNote:
             if ch not in freq:
                 return False
 
-            if seen[ch] > freq[ch]:
-
+            if freq[ch]==0:
                 return False
+            else:
+                freq[ch]-=1
 
         return True 
