@@ -7,7 +7,7 @@ class Solution:
         seen={}
         freq={}
 
-        for i in range(len(s)):
+        for i in range(len(t)):
             ch=s[i]
             cj=t[i]
 
